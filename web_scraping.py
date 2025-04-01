@@ -40,7 +40,7 @@ for pdf in pdf_url:
     download_pdf(pdf, dir_anexos)
 
 #onde compacta os pdf em um arquivo .zip
-zip_name = "anexos.zip"
+zip_name = "anexos/anexos.zip"
 with zipfile.ZipFile(zip_name, 'w', zipfile.ZIP_DEFLATED) as zipf:
     for pdf in os.listdir(dir_anexos):
         zipf.write(os.path.join(dir_anexos, pdf), os.path.basename(pdf))
